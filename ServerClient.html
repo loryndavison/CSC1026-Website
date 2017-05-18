@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSC1026 Web Design</title>
+    <link rel="stylesheet" type="text/css" href="styleSheet.css" />
+    <script type="text/javascript" src="JavaScript/ServerClient.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="HomePage.html">Homepage</a></li>
+            <li><a href="InternetHistory.html">Internet History</a></li>
+            <li><a href="WebVsInternet.html">Web vs Internet</a></li>
+            <li><a href="ServerClient.html">Web Server and Clients</a></li>
+            <li><a href="HTTP.html">HTTP</a></li>
+            <li><a href="Principles.html">Key Principles of Web Content</a></li>
+            <li><a href="HTML.html">HTML</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        <div id="content">
+            <h2> Web Clients and Servers</h2>
+            <hr/>
+            <h3>Web Clients</h3>
+            <ul>
+                <li>A web client is a piece of software to create and send HTTP requests and handle their responses.</li>
+                <li>Mosasic kick-started mainstream interest followed by internet explorer and netscape.</li>
+                <li>"Under the hood" many share common layout engines (eg. Trident, Gecko, KHTML/Webkit etc) </li>
+            </ul>
+            <div class="tableDiv">
+                <table class="table">
+                    <tr>
+                        <th class="tField">Feature</th>
+                        <th class="tField">Description</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Request generation</th>
+                        <th class="tField">Assemble URIs and initiate the request(s)</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Response Handling</th>
+                        <th class="tField">Accept server response codes and act accordingly</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Content Parsing</th>
+                        <th class="tField">Read/process HTML markup and CSS from response</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Maintain state</th>
+                        <th class="tField">Create and manage storage of local tokens and cookies</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Client-side scripting</th>
+                        <th class="tField">Run JavaScript supplied by server response</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Encryption</th>
+                        <th class="tField">Manage SSL encrypted transactions (over HTTPS)</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Media Objects</th>
+                        <th class="tField">Display/play embedded media objects</th>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <hr/>
+            <h3>Web Servers</h3>
+            <ul>
+                <li>The term web server can refer to hardware or software.
+                    <ul>
+                        <li>In terms of hardware, a web server is a computer that stores a website's component files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files) and delivers them to the end-user's device. </li>
+                        <li> In terms of software, a web server includes several parts that control how web users access hosted files. The server listens on an open network port for incoming HTTP requests and responds accordingly.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tableDiv">
+                <table class="table">
+                    <tr>
+                        <th class="tField">Feature</th>
+                        <th class="tField">Description</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Path Translation</th>
+                        <th class="tField">Locate resource specified in the URL</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Virtual Hosting</th>
+                        <th class="tField">Run multiple websites from one server</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Access Restriction</th>
+                        <th class="tField">Control who can access the resources</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Log Access and Errors</th>
+                        <th class="tField">Record whats going on and what went wrong</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Encrypted Operation</th>
+                        <th class="tField">Protect sensitive data in transit</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Load balancing</th>
+                        <th class="tField">Manage traffic and processing resources</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">Server Scripting</th>
+                        <th class="tField">Run external programs and applications</th>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <hr/>
+            <div id="quiz">
+                <form name="quiz" method="post">
+                    <p>1. Which is not a feature of web clients?
+                        <select id="dropdown1">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="1.1">Request Generation</option>
+                            <option value="1.2">Access Restriction</option>
+                            <option value="1.3">Client-side scripting</option>
+                            <option value="1.4">Maintain State</option>
+                        </select>
+                    </p>
+                    <div id="textDiv1"></div>
+                    <p>2. Which is not a feature of web servers?
+                        <select id="dropdown2">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="2.1">Path Translation</option>
+                            <option value="2.2">Load Balancing</option>
+                            <option value="2.3">Virtual Hosting</option>
+                            <option value="2.4">Content Parsing</option>
+                        </select>
+                    </p>
+                    <div id="textDiv2"></div>
+                    <p> 3. What does Server Scripting do?
+                        <select id="dropdown3">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="3.1">Run multiple websites from one server</option>
+                            <option value="3.2">Manage traffic and processing resources</option>
+                            <option value="3.3">Run external programs and applications</option>
+                            <option value="3.4">Record whats going on and what went wrong</option>
+                        </select>
+                    </p>
+                    <div id="textDiv3"></div>
+                    <br/>
+                    <div id="button">
+                        <button type="button" onclick="checkForm()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="nextPage">
+            <p><a href="WebVsInternet.html"> Previous Page </a> <a href="HTTP.html"> Next Page </a></p>
+        </div>
+    </div>
+</body>

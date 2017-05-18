@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSC1026 Web Design</title>
+    <link rel="stylesheet" type="text/css" href="styleSheet.css" />
+    <script type="text/javascript" src="JavaScript/Principles.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="HomePage.html">Homepage</a></li>
+            <li><a href="InternetHistory.html">Internet History</a></li>
+            <li><a href="WebVsInternet.html">Web vs Internet</a></li>
+            <li><a href="ServerClient.html">Web Server and Clients</a></li>
+            <li><a href="HTTP.html">HTTP</a></li>
+            <li><a href="Principles.html">Key Principles of Web Content</a></li>
+            <li><a href="HTML.html">HTML</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        <div id="content">
+            <h2>Key Principles of Web Content</h2>
+            <hr/>
+            <h3>Web Content Basics</h3>
+            <ul>
+                <li>Source code is delivered to the client (browser)</li>
+                <li>Browser processes dpcument and renders display to user</li>
+                <li>All web documents use HTML</li>
+                <li>Other embedded technologies enhance display and behaviour</li>
+            </ul>
+            <br/>
+            <hr/>
+            <h3>What makes up a Web Page?</h3> A web document typically has three concerns:
+            <ul>
+                <li>Content - information converyed by a page</li>
+                <li>Presentation - the appearance of a page</li>
+                <li>Behaviour - interactive or responsive functionality</li>
+            </ul>
+            <hr/>
+            <h3>Separation of Concerns</h3>
+            <p>The general idea of separation of concerns is that one should avoid co-locating different concerns within the design or code. </p>
+            <p>This means keeping the code for the different concerns in separate documents:</p>
+            <ul>
+                <li>Content structure and semantics is in HTML documents</li>
+                <li>Presentation style and layout is in CSS documents</li>
+                <li>Behaviour scripting and interactivity
+                    <ul>
+                        <li>Client-side - Javascript documents</li>
+                        <li>Server-side - PHP, Perl, Java, Ruby etc. documents</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="blockquote">
+                <p>Separation of Concerns, even if not perfectly possible, is yet the only available technique for effective ordering of one’s thoughts, that I know of.</p>
+                <br/>
+                <p>- Edsger W. Dijkstra</p>
+            </div>
+            <ul>
+                <li>Separation of content from presentation tells the user and the device something meaningful about a page independently of its appearance.
+                    <ul>
+                        <li>Semantic markup vs Stylistic instructions</li>
+                        <li>Heading level vs Large font</li>
+                        <li>Strong emphasis vs Bold</li>
+                        <li>New paragraph vs Line break</li>
+                    </ul>
+            </ul>
+            <ul>
+                <li>Separation is also beneficial as it increases:
+                    <ul>
+                        <li>Consistency</li>
+                        <li>Accessibility</li>
+                        <li>Ease of maintenance</li>
+                    </ul>
+                </li>
+            </ul>
+            <br/>
+            <hr/>
+            <h3>HTML: A simple view</h3>
+            <ul>
+                <li>Content
+                    <ul>
+                        <li>Text and images</li>
+                    </ul>
+                </li>
+                <li>Elements (Tags)
+                    <ul>
+                        <li>Core structure for the content</li>
+                        <li>Focus on semantics</li>
+                        <li>Default rendering conventions allow for basic functional display</li>
+                    </ul>
+                </li>
+                <li>Attributes
+                    <ul>
+                        <li>Addition information/semantics about the elements</li>
+                    </ul>
+                </li>
+            </ul>
+            <br/>
+            <hr/>
+            <h3>CSS: A simple view</h3>
+            <ul>
+                <li>Allows visual presentation to be applied to structured mark up</li>
+                <li>Pattern matching syntax identifies where to apply style</li>
+                <li>Property:Value syntax specifies what to apply</li>
+                <li>Allows reflowing/positioning of content</li>
+                <li>Can include external images, animation and transformations</li>
+            </ul>
+            <br/>
+            <hr/>
+            <div id="quiz">
+                <form name="quiz" method="post">
+                    <p>1. What concern uses HTML?
+                        <select id="dropdown1">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="1.1">Presentation</option>
+                            <option value="1.2">Content</option>
+                            <option value="1.3">Behaviour</option>
+                        </select>
+                    </p>
+                    <div id="textDiv1"></div>
+                    <p>2. What is not provided by CSS?
+                        <select id="dropdown2">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="2.1">Core structure for the content</option>
+                            <option value="2.2">Pattern matching syntax to identify where to apply style</option>
+                            <option value="2.3">Visual presentation being applied to structured mark up</option>
+                            <option value="2.4">Reflowing/positioning of content</option>
+                        </select>
+                    </p>
+                    <div id="textDiv2"></div>
+                    <p> 3. Which of the following deals with client side scripting?
+                        <select id="dropdown3">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="3.1">Java</option>
+                            <option value="3.2">Ruby</option>
+                            <option value="3.3">JavaScript</option>
+                            <option value="3.4">PHP</option>
+                        </select>
+                    </p>
+                    <div id="textDiv3"></div>
+                    <br/>
+                    <div id="button">
+                        <button type="button" onclick="checkForm()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="nextPage">
+            <p><a href="HTTP.html"> Previous Page </a> <a href="HTML.html"> Next Page </a></p>
+        </div>
+    </div>
+</body>

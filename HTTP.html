@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSC1026 Web Design</title>
+    <link rel="stylesheet" type="text/css" href="styleSheet.css" />
+    <script type="text/javascript" src="JavaScript/HTTP.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="HomePage.html">Homepage</a></li>
+            <li><a href="InternetHistory.html">Internet History</a></li>
+            <li><a href="WebVsInternet.html">Web vs Internet</a></li>
+            <li><a href="ServerClient.html">Web Server and Clients</a></li>
+            <li><a href="HTTP.html">HTTP</a></li>
+            <li><a href="Principles.html">Key Principles of Web Content</a></li>
+            <li><a href="HTML.html">HTML</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        <div id="content">
+            <h2>HTTP</h2>
+            <hr/>
+            <ul>
+                <li>HyperText Transfer Protocol makes the world wide web work.
+                    <ul>
+                        <li>Clients ask for resources from the servers by assembling and sending a HTTP request message.</li>
+                        <li>Servers respond with the appropriate HTTP response message, including any content to be displayed.</li>
+                    </ul>
+                </li>
+                <li>HTTP requests and responses travel as TCP/IP packets.</li>
+                <li>HTTP is stateless. This means:
+                    <ul>
+                        <li>Each request/response pair is an independent exchange.</li>
+                        <li>No protocol level maintenance of state (for scalability)</li>
+                    </ul>
+                </li>
+            </ul>
+            <hr/>
+            <h3>HTTP Methods</h3>
+            <ul>
+                <li>The operations get carried out over HTTP
+                    <ul>
+                        <li>HEAD, GET, POST, PUT, DELETE etc.</li>
+                    </ul>
+                </li>
+                <li>HEAD and GET are the only mandatory operations</li>
+                <li>GET returns the current state and content of the resource</li>
+                <li>HEAD returns the response metadata</li>
+            </ul>
+            <div class="tableDiv">
+                <table class="table">
+                    <tr>
+                        <th class="tField">Method</th>
+                        <th class="tField">Use</th>
+                        <th class="tField">Safe</th>
+                        <th class="tField">Idempotent</th>
+                        <th class="tField">Mandatory</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">HEAD</th>
+                        <th class="tField">Exchange of request/response headers</th>
+                        <th class="tField">Yes</th>
+                        <th class="tField">Yes</th>
+                        <th class="tField">Yes</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">GET</th>
+                        <th class="tField">Request and return of the current state and content of a resource</th>
+                        <th class="tField">Yes</th>
+                        <th class="tField">Yes</th>
+                        <th class="tField">Yes</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">POST</th>
+                        <th class="tField">Request entity body to update resource or as input for processing</th>
+                        <th class="tField">No</th>
+                        <th class="tField">No</th>
+                        <th class="tField">No</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">PUT</th>
+                        <th class="tField">Server stores entity body contents at request URI location</th>
+                        <th class="tField">No</th>
+                        <th class="tField">Yes</th>
+                        <th class="tField">No</th>
+                    </tr>
+                    <tr>
+                        <th class="tField">DELETE</th>
+                        <th class="tField">Deletes identified resource</th>
+                        <th class="tField">No</th>
+                        <th class="tField">Yes</th>
+                        <th class="tField">No</th>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <hr/>
+            <h3>HTTP Headers</h3>
+            <ul>
+                <li>Headers are the metadata for the request/response exchange</li>
+                <li>Some metadata is generic and applies to both request and response
+                    <ul>
+                        <li>Date - Date/Time stamp for message</li>
+                        <li>Cache Control - Instructions for en-route caching</li>
+                    </ul>
+                </li>
+                <li>Some web applications use custom headers to add comments or annotations to an HTTP message.</li>
+                <li>Be aware that information in headers is not always trustworthy as they can be spoofed.</li>
+            </ul>
+            <div class="columnPane"> Request Headers
+                <ul>
+                    <li>Used by web clients to identify themselves and control how content is returned.
+                        <ul>
+                            <li>Response preferences</li>
+                            <li>Additonal request info</li>
+                            <li>Conditional headers</li>
+                            <li>Constrain server behaviour</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="columnPane"> Response Headers
+                <ul>
+                    <li>Used to specify how content is being returned and how it should be handled.
+                        <ul>
+                            <li>Redirection</li>
+                            <li>Additonal server info</li>
+                            <li>Authentication</li>
+                            <li>Caching</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br/>
+            <hr/>
+            <h3>A Simple Request</h3>
+            <p>The below animation shows a simple diagram of a request being made and handled by the protocols.</p>
+            <div id="animation"><img alt="requestAnimation" src="AdditionalContent/simpleRequest.gif"> </div>
+            <br/>
+            <hr/>
+            <div id="quiz">
+                <form name="quiz" method="post">
+                    <p>1. What does POST do?
+                        <select id="dropdown1">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="1.1">Request and return of the current state and content of a resource</option>
+                            <option value="1.2">Server stores entity body contents at request URI location</option>
+                            <option value="1.3">Request entity body to update resource or as input for processing</option>
+                            <option value="1.4">Exchange of request/response headers</option>
+                        </select>
+                    </p>
+                    <div id="textDiv1"></div>
+                    <p>2. Which operations are mandatory?
+                        <select id="dropdown2">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="2.1">HEAD/GET</option>
+                            <option value="2.2">POST/GET</option>
+                            <option value="2.3">HEAD/PUT</option>
+                            <option value="2.4">PUT/GET</option>
+                        </select>
+                    </p>
+                    <div id="textDiv2"></div>
+                    <p> 3. Which is not contained within a request header?
+                        <select id="dropdown3">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="3.1">Conditional headers</option>
+                            <option value="3.2">Response preferences</option>
+                            <option value="3.3">Redirection</option>
+                            <option value="3.4">Constrain server behaviour</option>
+                        </select>
+                    </p>
+                    <div id="textDiv3"></div>
+                    <br/>
+                    <div id="button">
+                        <button type="button" onclick="checkForm()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="nextPage">
+            <p><a href="ServerClient.html"> Previous Page </a> <a href="Principles.html"> Next Page </a></p>
+        </div>
+    </div>
+</body>

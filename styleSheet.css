@@ -1,0 +1,167 @@
+/**/
+
+body {
+    /*sets the main background colour for the page, font family and padding*/
+    background-color: #C7C1C1;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    padding: 5px;
+}
+
+#main {
+    /*sets the background colour for the container surrounding the content container, sets the width of the page, sets the position of it relative to the body, floats right and sets padding */
+    background-color: #E6E6E6;
+    width: 75%;
+    /*sets the position relative */
+    padding: 20px;
+    float: right;
+    position: relative;
+}
+
+#content {
+    /*sets the background colour for the content container and sets padding*/
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#navbarWrapper {
+    /**/
+    margin-right: 10px;
+    max-width: 48em;
+}
+
+#navbar {
+    /* sets up the navigation bar to be positioned at the right of the main content section and sets the background colour of the bar */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #E6E6E6;
+    position: fixed;
+    /* Make it stick, even on scroll */
+    min-width: 40px;
+}
+
+#navbar ul {
+    /* sets the list type to none to allow for positioning within the navigation bar and floats list to the right of the page */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    white-space: nowrap
+}
+
+#navbar li a {
+    /* displays the list as a block, sets the text colour to black and aligns the text to the left of each box in the block */
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.blockquote {
+    /*sets background of the blockquote div, sets border colour, margins and padding */
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 24px 10px;
+    padding: 8px 10px;
+}
+
+.blockquote:before {
+    color: #ccc;
+    margin-right: 4px;
+}
+
+.blockquote p {
+    /*sets paragraphs within blockquote divs to displat inline*/
+    display: inline;
+}
+
+.table {
+    /*sets border as collapsable and sets border spacing to 0*/
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table td {
+    /*sets font, padding and style for table element td*/
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+}
+
+.table th {
+    /*sets font, padding and style for table element th*/
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+}
+
+.table .tField {
+    /*aligns text in fields to top*/
+    vertical-align: top;
+}
+
+.tableDiv {
+    /*sets padding to the left of the tableDiv div*/
+    padding-left: 40px;
+}
+
+hr {
+    /*sets the height, colour and width of hr*/
+    height: 5px;
+    background-color: black;
+    width: 100%;
+    border: none;
+}
+
+.exampleCode {
+    /*sets padding to the left of the picture*/
+    padding-left: 30px;
+}
+
+#video {
+    /*sets padding to the left of the picture*/
+    padding-left: 30px;
+}
+
+#textDiv1,
+#textDiv2,
+#textDiv3 {
+    /*changes the colour of the text in these divs to blue*/
+    color: deepskyblue;
+}
+
+.columnPane {
+    /*sets the columns width to 50% and floats them left*/
+    width: 50%;
+    float: left;
+}
+
+#animation {
+    /*sets postion relative and sets padding to the left of the image*/
+    position: relative;
+    padding-left: 20px;
+}
+
+#growthGraph {
+    /*sets postion relative and sets padding to the left of the image*/
+    position: relative;
+    padding-left: 20px;
+}
+
+.nextPage {
+    /*floats right*/
+    float: right;
+}

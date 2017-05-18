@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSC1026 Web Design</title>
+    <link rel="stylesheet" type="text/css" href="styleSheet.css" />
+    <script type="text/javascript" src="JavaScript/HTML.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="HomePage.html">Homepage</a></li>
+            <li><a href="InternetHistory.html">Internet History</a></li>
+            <li><a href="WebVsInternet.html">Web vs Internet</a></li>
+            <li><a href="ServerClient.html">Web Server and Clients</a></li>
+            <li><a href="HTTP.html">HTTP</a></li>
+            <li><a href="Principles.html">Key Principles of Web Content</a></li>
+            <li><a href="HTML.html">HTML</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        <div id="content">
+            <h2>HTML</h2>
+            <hr/>
+            <h3>HTML Versions</h3>
+            <ul>
+                <li>HTML was originally designed to be very simple and handle text based documents, but as the web became popular and web browsers developed, new features were added to subsequent versions.</li>
+                <li>HTML 2.0 up to HTML 3.2 standardised common features
+                    <ul>
+                        <li>Page structure, Forms, Images, Tables, Frames</li>
+                    </ul>
+                </li>
+                <li>HTML 4.01 (1999) added enhancements for new technology:
+                    <ul>
+                        <li>Support for CSS</li>
+                        <li>Support for dynamic scripting with Javascript</li>
+                        <li>Accessibilty features</li>
+                        <li>Standardised suppose for multimedia and embedded objects</li>
+                    </ul>
+                </li>
+            </ul>
+            <br/>
+            <hr/>
+            <h3>Problems with HTML</h3>
+            <ul>
+                <li>HTML was originally only targeted at web browsers on PCs and workstations
+                    <ul>
+                        <li>This forgave syntax errors and variations in HTML markup (eg. missing end tags, lower/uppercase tag names)</li>
+                        <li>Required more processing at the browser than a markup language with stricter syntax</li>
+                        <li>This caused problems for constrained devices and for machine oriented processing of markup</li>
+                    </ul>
+                </li>
+                <li>This all led to the development of XHTML 1.0 (2000/02)</li>
+            </ul>
+            <br/>
+            <hr/>
+            <h3>XHTML</h3>
+            <ul>
+                <li>XHTML was created by tightening up syntax by using XML markup rules</li>
+                <li>XHTML uses the same tags and attribures as HTML 4.01</li>
+                <li>The differences are in structure and syntax
+                    <ul>
+                        <li>Tag/attribute names must be in lower case</li>
+                        <li>Attributes must be name/value pairs</li>
+                        <li>Tags must both open and close</li>
+                        <li>self-contained tags must be closed</li>
+                        <li>Special characters must use corrent entity values</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Advantages of XHTML</h4>
+            <ul>
+                <li>Designed for internationalisation, accessibility, device-independence, usability and document structuring</li>
+                <li>Leads developers towards separation of concerns</li>
+            </ul>
+            <h4>Disadvantages of XHTML</h4>
+            <ul>
+                <li>Complex evolution</li>
+                <li>Requires new/reiengineered renderers to benefit over existing HTML development</li>
+                <li>Unwieldy in contemporary use cases</li>
+            </ul>
+            <br/>
+            <hr/>
+            <h3>HTML5</h3>
+            <ul>
+                <li>HTML5 is more than just HTML, it is a logical extension of the three concerns:
+                    <ul>
+                        <li>Markup - developed from HTML4.01/XHTML</li>
+                        <li>Presentation - extensions to CSS to form CSS3</li>
+                        <li>Behaviour - extensions to DOM</li>
+                    </ul>
+                </li>
+                <li>Some core principles of HTML:
+                    <ul>
+                        <li>To improve semanti organisation</li>
+                        <li>To replace scripting with core make up where possible</li>
+                        <li>To reduce need for browser plug ins</li>
+                        <li>To improve device independence</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>HTML5 is important because it provides a cross platform, device independent option for rich application development.</li>
+            </ul>
+            <ul>
+                <li>It includes features such as:
+                    <ul>
+                        <li>Semantic content structure elements</li>
+                        <li>Logical video and audio elements for media playback</li>
+                        <li>New form controls - with set in validation</li>
+                        <li>Animation and drawings with CSS3, canvas tags and SVG</li>
+                        <li>Drag and drop interfaces</li>
+                        <li>Support for local offline storage which means some applications can be used offline</li>
+                        <li>Improved browser compatibility with CSS3</li>
+                    </ul>
+                </li>
+            </ul>
+            <br/>
+            <hr/>
+            <h3>Basic HTML Structure</h3>
+            <p>The basic structure to a html document is: </p>
+            <ul>
+                <li>A line containing HTML version information</li>
+                <li>A declarative header sections (delimted by the &lt;head&gt; element</li>
+                <li>A body which contains the document's actual content (delimited by the &lt;body&gt; element</li>
+                <li>The head and body elements sections should be delimited by the &lt;html&gt; element</li>
+            </ul>
+            <p>This is also shown in the examples below.</p>
+            <div>
+                <p>This is an example of HTML 4.01 and some the tags used.</p><img class="exampleCode" src="AdditionalContent/exampleCode.jpeg" alt="exampleCode" /></div>
+            <div>
+                <p>This is an example of HTML5 and some of the tags used.</p><img class="exampleCode" src="AdditionalContent/HTML5Example.jpeg" alt="HTML5Example" /></div>
+            <p>The video below shows some basic tags that can be used in a HTML document and show examples of their uses.</p>
+            <div id=video>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KPhjWhpMXRE" allowfullscreen></iframe>
+                <br/>
+                <div id=reference>
+                    <br/><a href="https://www.youtube.com/watch?v=KPhjWhpMXRE">Basic Tags by Hadrian Cawthorne</a></div>
+            </div>
+            <br/>
+            <hr/>
+            <div id="quiz">
+                <form name="quiz" method="post">
+                    <p>1. What is not supported by HTML3.2?
+                        <select id="dropdown1">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="1.1">Forms</option>
+                            <option value="1.2">CSS</option>
+                            <option value="1.3">Pictures</option>
+                            <option value="1.4">Tables</option>
+                        </select>
+                    </p>
+                    <div id="textDiv1"></div>
+                    <p>2. What year was XHTML first developed?
+                        <select id="dropdown2">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="2.1">2000</option>
+                            <option value="2.2">1998</option>
+                            <option value="2.3">2002</option>
+                            <option value="2.4">2003</option>
+                        </select>
+                    </p>
+                    <div id="textDiv2"></div>
+                    <p> 3. What is needed in previous versions of HTML that is not needed in HTML5?
+                        <select id="dropdown3">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="3.1">HTML tags</option>
+                            <option value="3.2">Body tags</option>
+                            <option value="3.3">Head tags</option>
+                            <option value="3.4">DTD declaration</option>
+                        </select>
+                    </p>
+                    <div id="textDiv3"></div>
+                    <br/>
+                    <div id="button">
+                        <button type="button" onclick="checkForm()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="nextPage">
+            <p><a href="Principles.html"> Previous Page </a></p>
+        </div>
+    </div>
+</body>
+
+</html>

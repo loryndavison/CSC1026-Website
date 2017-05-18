@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSC1026 Web Design</title>
+    <link rel="stylesheet" type="text/css" href="styleSheet.css" />
+    <script type="text/javascript" src="JavaScript/WebVsInternet.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="HomePage.html">Homepage</a></li>
+            <li><a href="InternetHistory.html">Internet History</a></li>
+            <li><a href="WebVsInternet.html">Web vs Internet</a></li>
+            <li><a href="ServerClient.html">Web Server and Clients</a></li>
+            <li><a href="HTTP.html">HTTP</a></li>
+            <li><a href="Principles.html">Key Principles of Web Content</a></li>
+            <li><a href="HTML.html">HTML</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        <div id="content">
+            <h2> Web vs Internet</h2>
+            <hr/>
+            <p>There has always been confusion over the differences between the internet and the world wide web. The following quotes from Tim Berners Lee make this a bit clearer.</p>
+            <div class="blockquote">
+                <p>"The Web is an abstract (imaginary) space of information ... On the Net, the connections are cables between computers; on the Web, connections are hypertext links ... The Web made the net useful because people are really interested in information" </p>
+                <br/>
+                <p>- Tim Berners Lee</p>
+            </div>
+            <div class="blockquote">
+                <p>The Internet ('Net) is a network of networks. Basically it is made from computers and cables...If you put the right address on a packet, and gave it to any computer which is connected as part of the Net, each computer would figure out which cable to send it down next so that it would get to its destination. That's what the Internet does. It delivers packets - anywhere in the world, normally well under a second.</p>
+                <br/>
+                <p>- Tim Berners Lee</p>
+            </div>
+            <br/>
+            <hr/>
+            <h3>How the Internet works</h3>
+            <h4>What is the internet?</h4>
+            <ul>
+                <li>A networking infrastructure that allows hardware devices to connect to one another.</li>
+                <li>Run using protocols which specify how transactions are to be carried out.</li>
+                <li>The use of software clients and servers allow users and devices to access and use internet services.</li>
+            </ul>
+            <br/>
+            <h4>Clients, Servers and Peers</h4>
+            <ul>
+                <li>The most common internet services are based on a client/server model using appropriate protocols.</li>
+                <li>Local software clients usually access centralised remote servers. (eg. Email via Outlook server)</li>
+                <li>Peer-to-Peer technology can directly connect multiple decentralised computers where each acts as both client and server. (eg. VOIP/video calling)</li>
+            </ul>
+            <br/>
+            <h4>Protocols</h4>
+            <ul>
+                <li>Clients and servers typically use a stack of different protocols to provide service.</li>
+                <li>The most common protocols in use today are those associated with web and email services. (eg. HTTP/HTTPS, SMTP/IMAP/POP)</li>
+                <li>Below is a table showing some of the most common protocols:</li>
+            </ul>
+            <div class="tableDiv">
+                <table class="table">
+                    <tr>
+                        <th class="tField">Protocol</th>
+                        <th class="tField"></th>
+                        <th class="tField">Notes</th>
+                    </tr>
+                    <tr>
+                        <td class="tField">HTTP</td>
+                        <td class="tField">HyperText Transfer Protocol</td>
+                        <td class="tField">Core protocol for web transactions</td>
+                    </tr>
+                    <tr>
+                        <td class="tField">SSL</td>
+                        <td class="tField">Secure Sockets Layer</td>
+                        <td class="tField">Used for data encryption</td>
+                    </tr>
+                    <tr>
+                        <td class="tField">HTTPS</td>
+                        <td class="tField">Secure HyperText Transfer Protocol</td>
+                        <td class="tField">A combination of SSL and HTTP</td>
+                    </tr>
+                    <tr>
+                        <td class="tField">SMTP/POP/IMAP</td>
+                        <td class="tField">Simple Mail Transfer Protocol/Post Office Protocol/Internet Message Access Protocol</td>
+                        <td class="tField">Used in combination to provide most email services</td>
+                    </tr>
+                    <tr>
+                        <td class="tField">FTP</td>
+                        <td class="tField">File Transfer Protocol</td>
+                        <td class="tField">Used to exchange files between computers</td>
+                    </tr>
+                    <tr>
+                        <td class="tField">SSH and SFTP</td>
+                        <td class="tField">Secure SHell and Secure FTP</td>
+                        <td class="tField">Encrypted access to remote computers and an extension for encrypted file transfer</td>
+                    </tr>
+                    <tr>
+                        <td class="tField">BitTorrent</td>
+                        <td class="tField"></td>
+                        <td class="tField">Protocol for peer-to-peer data access and exchange</td>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <h4>IP: Routing Packets</h4>
+            <ul>
+                <li>Internet protocol routes packets based on the address information in their header</li>
+                <li>IP routing is connection-less. This means:
+                    <ul>
+                        <li>It doesn't require a fixed connection between the endpoints.</li>
+                        <li>It enables data to travel via multiple routes.</li>
+                        <li>One wire can handle multiple connections.</li>
+                        <li>Packets can be re-routed around points of failure within the system.</li>
+                    </ul>
+                </li>
+                <li>However risks to IP routing include:
+                    <ul>
+                        <li>Corruption of data</li>
+                        <li>Loss of packets</li>
+                        <li>Duplicate packets arriving</li>
+                        <li>Packets being delivered out of sequence</li>
+                    </ul>
+                </li>
+                <li>Some of the protocols included in IP are:
+                    <ul>
+                        <li>BGP (Border Gateway Protocol)</li>
+                        <li>IS-IS (Intermediate System - Intermediate System) </li>
+                        <li>OSPF (Open Shortest Path First)</li>
+                        <li>RIP (Routing Information Protocol)</li>
+                    </ul>
+                </li>
+                <li>IP only promises best-effort delivery</li>
+            </ul>
+            <br/>
+            <h4>TCP/IP</h4>
+            <ul>
+                <li>TCP (Transmission Control Protocol)
+                    <ul>
+                        <li>Handles direct connection on computers between client/server</li>
+                        <li>Breaks outgoing messages into packets to send via IP</li>
+                        <li>Assembles incoming packers into messages to pass back to the application</li>
+                    </ul>
+                </li>
+                <li>Packets have two parts to them:
+                    <ul>
+                        <li>Header (contains information on addressing, sequencing and metadata)</li>
+                        <li>Body (contains actual data payload)</li>
+                    </ul>
+                </li>
+                <li>IP (Internet Protocol)
+                    <ul>
+                        <li>Handles delivery of the packets to/from any device with an IP address</li>
+                        <li>IP address is a unique numeric identifier for a device on the internet</li>
+                    </ul>
+                </li>
+            </ul>
+            <br/>
+            <h4>What is meant by best effort delivery?</h4>
+            <p>Performance of IP routing can be affected by various factors.</p>
+            <ul>
+                <li>Unpredictability means that IP cannot guarantee that all packets..
+                    <ul>
+                        <li>will arrive within a fixed time</li>
+                        <li>will arrive in the correct order</li>
+                        <li>will arrive at all</li>
+                    </ul>
+                </li>
+                <li> To help resolve these issues, TCP on the destination device checks and reassembles packets based on header information and can..
+                    <ul>
+                        <li>request re-transmission of lost/corrupted packets</li>
+                        <li>correctly re-sequence packets</li>
+                        <li>refuse to accept/wait for any more packets(drop connection)</li>
+                    </ul>
+                </li>
+            </ul>
+            <br/>
+            <h4>Domain Names</h4>
+            <ul>
+                <li>Domain names make the internet easier to use by mapping numeric IP addresses to text based names.</li>
+                <li>When a device makes a request using a domain name it is resolved back into a numeric IP address by a DNS server</li>
+            </ul>
+            <br/>
+            <hr/>
+            <div id="quiz">
+                <form name="quiz" method="post">
+                    <p>1. What is SSL used for?
+                        <select id="dropdown1">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="1.1">Core protocol for web transactions</option>
+                            <option value="1.2">Used to exchange files between computers</option>
+                            <option value="1.3">Data encryption</option>
+                            <option value="1.4">Peer-to-peer data access and exchange</option>
+                        </select>
+                    </p>
+                    <div id="textDiv1"></div>
+                    <p>2. What delivery is promised by IP
+                        <select id="dropdown2">
+                            <option value="0.0" label=" " selected="selected"> </option>
+                            <option value="2.1">Guaranteed</option>
+                            <option value="2.2">Best Effort</option>
+                            <option value="2.3">Reliable</option>
+                            <option value="2.4">Unreliable</option>
+                        </select>
+                    </p>
+                    <div id="textDiv2"></div>
+                    <p> 3. What is FTP used for?
+                        <select id="dropdown3">
+                            <option value="0.0" label=" " selected="selected"></option>
+                            <option value="3.1">Data encryption</option>
+                            <option value="3.2">Used to exchange files between computers</option>
+                            <option value="3.3">Peer-to-peer data access and exchange</option>
+                            <option value="3.4">Email services</option>
+                        </select>
+                    </p>
+                    <div id="textDiv3"></div>
+                    <br/>
+                    <div id="button">
+                        <button type="button" onclick="checkForm()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="nextPage">
+            <p><a href="InternetHistory.html"> Previous Page </a> <a href="ServerClient.html"> Next Page </a></p>
+        </div>
+    </div>
+</body>
